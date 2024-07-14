@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <style>
+        .button-container {
+    margin: 20px 0;
+}
+.button-container button {
+    margin-right: 10px;
+}
+.image-container {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+    </style>
+    <script>
+        function setAspectRatio(ratio) {
+    const image = document.querySelector('.image-container img');
+    if (ratio === 'auto') {
+        image.style.aspectRatio = 'auto';
+    } else {
+        image.style.aspectRatio = ratio;
+    }
+}
+    </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href= "favicon.ico" type="image/x-icon" />
+		<title> 0714練習之二</title>
+    </head>
+    <body>
+    <h1>圖片大小測試</h1>
+        <div class="button-container">
+            <button onclick="setAspectRatio('1 / 1')">1:1</button>
+            <button onclick="setAspectRatio('16 / 9')">16:9</button>
+            <button onclick="setAspectRatio('4 / 3')">4:3</button>
+            <button onclick="setAspectRatio('auto')">Auto</button>
+        </div>
+    <div class="image-container">
+        <img src="10227.jpg"  alt="測試圖片">
+    </div>
+</body>
+</html>
